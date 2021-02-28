@@ -49,11 +49,11 @@ Once the test coverage for T2 is complete, the OC can review the current T2 topo
       ptf_image_name: docker-ptf
       ptf: ptf_vms_12
       ptf_ip: 10.250.12.188/24
-      ptf_ipv6:
+      ptf_ipv6: fec0::ffff:afa:c
       server: server_12
       vm_base: VM1200
       dut: [ixr-vdk-board7, ixr-vdk-board4, ixr-vdk-board3, ixr-cpm2-chassis4]
-      comment: ' T2 OC Tests vdk_chassis4'
+      comment: 'T2 OC Tests vdk_chassis4'l
 
  2.  Edit your veos.vtb to add the 72 VMs as mentioned in the T2 topology. Ours is given below
 
@@ -124,274 +124,8 @@ Once the test coverage for T2 is complete, the OC can review the current T2 topo
           ansible_host: 10.250.12.54
           ansible_user: admin
           ansible_password: 123456
-        VM1205:
-          ansible_host: 10.250.12.55
-          ansible_user: admin
-          ansible_password: 123456
-        VM1206:
-          ansible_host: 10.250.12.56
-          ansible_user: admin
-          ansible_password: 123456
-        VM1207:
-          ansible_host: 10.250.12.57
-          ansi7le_user: admin
-          ansible_password: 123456
-        VM1208:
-          ansible_host: 10.250.12.58
-          ansible_user: admin
-          ansible_password: 123456
-        VM1209:
-          ansible_host: 10.250.12.59
-          ansible_user: admin
-          ansible_password: 123456
-        VM1210:
-          ansible_host: 10.250.12.60
-          ansible_user: admin
-          ansible_password: 123456
-        VM1211:
-          ansible_host: 10.250.12.61
-          ansible_user: admin
-          ansible_password: 123456
-        VM1212:
-          ansible_host: 10.250.12.62
-          ansible_user: admin
-          ansible_password: 123456
-        VM1213:
-          ansible_host: 10.250.12.63
-          ansible_user: admin
-          ansible_password: 123456
-        VM1214:
-          ansible_host: 10.250.12.64
-          ansible_user: admin
-          ansible_password: 123456
-        VM1215:
-          ansible_host: 10.250.12.65
-          ansible_user: admin
-          ansible_password: 123456
-        VM1216:
-          ansible_host: 10.250.12.66
-          ansible_user: admin
-          ansible_password: 123456
-        VM1217:
-          ansible_host: 10.250.12.67
-          ansible_user: admin
-          ansible_password: 123456
-        VM1218:
-          ansible_host: 10.250.12.68
-          ansible_user: admin
-          ansible_password: 123456
-        VM1219:
-          ansible_host: 10.250.12.69
-          ansible_user: admin
-          ansible_password: 123456
-        VM1220:
-          ansible_host: 10.250.12.70
-          ansible_user: admin
-          ansible_password: 123456
-        VM1221:
-          ansible_host: 10.250.12.71
-          ansible_user: admin
-          ansible_password: 123456
-        VM1222:
-          ansible_host: 10.250.12.72
-          ansible_user: admin
-          ansible_password: 123456
-        VM1223:
-          ansible_host: 10.250.12.73
-          ansible_user: admin
-          ansible_password: 123456
-        VM1224:
-          ansible_host: 10.250.12.74
-          ansible_user: admin
-          ansible_password: 123456
-        VM1225:
-          ansible_host: 10.250.12.75
-          ansible_user: admin
-          ansible_password: 123456
-        VM1226:
-          ansible_host: 10.250.12.76
-          ansible_user: admin
-          ansible_password: 123456
-        VM1227:
-          ansible_host: 10.250.12.77
-          ansible_user: admin
-          ansible_password: 123456
-        VM1228:
-          ansible_host: 10.250.12.78
-          ansible_user: admin
-          ansible_password: 123456
-        VM1229:
-          ansible_host: 10.250.12.79
-          ansible_user: admin
-          ansible_password: 123456
-        VM1230:
-          ansible_host: 10.250.12.80
-          ansible_user: admin
-          ansible_password: 123456
-        VM1231:
-          ansible_host: 10.250.12.81
-          ansible_user: admin
-          ansible_password: 123456
-        VM1232:
-          ansible_host: 10.250.12.82
-          ansible_user: admin
-          ansible_password: 123456
-        VM1233:
-          ansible_host: 10.250.12.83
-          ansible_user: admin
-          ansible_password: 123456
-        VM1234:
-          ansible_host: 10.250.12.84
-          ansible_user: admin
-          ansible_password: 123456
-        VM1235:
-          ansible_host: 10.250.12.85
-          ansible_user: admin
-          ansible_password: 123456
-        VM1236:
-          ansible_host: 10.250.12.86
-          ansible_user: admin
-          ansible_password: 123456
-        VM1237:
-          ansible_host: 10.250.12.87
-          ansible_user: admin
-          ansible_password: 123456
-        VM1238:
-          ansible_host: 10.250.12.88
-          ansible_user: admin
-          ansible_password: 123456
-        VM1239:
-          ansible_host: 10.250.12.89
-          ansible_user: admin
-          ansible_password: 123456
-        VM1240:
-          ansible_host: 10.250.12.90
-          ansible_user: admin
-          ansible_password: 123456
-        VM1241:
-          ansible_host: 10.250.12.91
-          ansible_user: admin
-          ansible_password: 123456
-        VM1242:
-          ansible_host: 10.250.12.92
-          ansible_user: admin
-          ansible_password: 123456
-        VM1243:
-          ansible_host: 10.250.12.93
-          ansible_user: admin
-          ansible_password: 123456
-        VM1244:
-          ansible_host: 10.250.12.94
-          ansible_user: admin
-          ansible_password: 123456
-        VM1245:
-          ansible_host: 10.250.12.95
-          ansible_user: admin
-          ansible_password: 123456
-        VM1246:
-          ansible_host: 10.250.12.96
-          ansible_user: admin
-          ansible_password: 123456
-        VM1247:
-          ansible_host: 10.250.12.97
-          ansible_user: admin
-          ansible_password: 123456
-        VM1248:
-          ansible_host: 10.250.12.98
-          ansible_user: admin
-          ansible_password: 123456
-        VM1249:
-          ansible_host: 10.250.12.99
-          ansible_user: admin
-          ansible_password: 123456
-        VM1250:
-          ansible_host: 10.250.12.100
-          ansible_user: admin
-          ansible_password: 123456
-        VM1251:
-          ansible_host: 10.250.12.101
-          ansible_user: admin
-          ansible_password: 123456
-        VM1252:
-          ansible_host: 10.250.12.102
-          ansible_user: admin
-          ansible_password: 123456
-        VM1253:
-          ansible_host: 10.250.12.103
-          ansible_user: admin
-          ansible_password: 123456
-        VM1254:
-          ansible_host: 10.250.12.104
-          ansible_user: admin
-          ansible_password: 123456
-        VM1255:
-          ansible_host: 10.250.12.105
-          ansible_user: admin
-          ansible_password: 123456
-        VM1256:
-          ansible_host: 10.250.12.106
-          ansible_user: admin
-          ansible_password: 123456
-        VM1257:
-          ansible_host: 10.250.12.107
-          ansible_user: admin
-          ansible_password: 123456
-        VM1258:
-          ansible_host: 10.250.12.108
-          ansible_user: admin
-          ansible_password: 123456
-        VM1259:
-          ansible_host: 10.250.12.109
-          ansible_user: admin
-          ansible_password: 123456
-        VM1260:
-          ansible_host: 10.250.12.110
-          ansible_user: admin
-          ansible_password: 123456
-        VM1261:
-          ansible_host: 10.250.12.111
-          ansible_user: admin
-          ansible_password: 123456
-        VM1262:
-          ansible_host: 10.250.12.112
-          ansible_user: admin
-          ansible_password: 123456
-        VM1263:
-          ansible_host: 10.250.12.113
-          ansible_user: admin
-          ansible_password: 123456
-        VM1264:
-          ansible_host: 10.250.12.114
-          ansible_user: admin
-          ansible_password: 123456
-        VM1265:
-          ansible_host: 10.250.12.115
-          ansible_user: admin
-          ansible_password: 123456
-        VM1266:
-          ansible_host: 10.250.12.116
-          ansible_user: admin
-          ansible_password: 123456
-        VM1267:
-          ansible_host: 10.250.12.117
-          ansible_user: admin
-          ansible_password: 123456
-        VM1268:
-          ansible_host: 10.250.12.118
-          ansible_user: admin
-          ansible_password: 123456
-        VM1269:
-          ansible_host: 10.250.12.119
-          ansible_user: admin
-          ansible_password: 123456
-        VM1270:
-          ansible_host: 10.250.12.120
-          ansible_user: admin
-          ansible_password: 123456
-        VM1271:
-          ansible_host: 10.250.12.121
-          ansible_user: admin
-          ansible_password: 123456
+        .
+        .
         VM1272:
           ansible_host: 10.250.12.122
           ansible_user: admin
@@ -522,26 +256,31 @@ Replace the model, serial, base_mac, ansible_host, and syseeprom_info of each ca
 ### Linux networking and cEOS bringup
 This step is no different than what is done in , say, a T1 topology.
 
-    ./testbed-cli.sh -t testbed.csv -m veos -k ceos add-topo ixr-vdk-chassis2-t2 password.txt
+<pre>
+./testbed-cli.sh -t testbed.csv -m veos -k ceos add-topo ixr-vdk-chassis2-t2 password.txt
+</pre>
 
 ### Generation of minigraph.xml for all DUTs
 
 gen-mg does not yet support generation of VoQ-specific metadata. This support has to be added by the Sonic Chassis community. Hence, our recommendation is to use a minigraph.xml file for each DUT without any VoQ related metadata, similar to a pizza box 
-
-    ./testbed-cli.sh -t testbed.csv -m veos gen-mg ixr-vdk-chassis2-t2 lab password.txt -e copy=true -e deploy=false
-
+<pre>
+./testbed-cli.sh -t testbed.csv -m veos gen-mg ixr-vdk-chassis2-t2 lab password.txt -e copy=true -e deploy=false
+</pre>
 The above command will generate and copy the minigraph file for all the linecards and supervisor card. It needs to be adjusted to incorporate [PR#2888](https://github.com/Azure/sonic-mgmt/pull/2888) to copy an already generated minigraph file to the DUT.
 
 ### Deploying minigraph.xml
 
 Since the generated minigraph file does not contain the VoQ related info, we can't deploy it to generate a config_db that has the VoQ related info. Instead, on each linecard
 - run sonic_cfggen to generate a temporary config_db.json.
-        
-            sudo sonic-cfggen -m /etc/sonic/minigraph.xml --print-data > /home/admin/config_db_oc_mg.json
-- Manually add the VoQ related data to the generated config_db_oc_mg.json 
-        - VoQ info to DEVICE_METADATA.localhost
-                
+<pre>   
+sudo sonic-cfggen -m /etc/sonic/minigraph.xml --print-data > /home/admin/config_db_oc_mg.json
+</pre>           
 
+- Manually add the VoQ related data to the generated config_db_oc_mg.json
+   
+   - VoQ info to DEVICE_METADATA.localhost
+   
+   <pre>
                 "DEVICE_METADATA": {
                 "localhost": {
                     .
@@ -553,9 +292,10 @@ Since the generated minigraph file does not contain the VoQ related info, we can
                     "asic_name": "Asic0"
                 }
               },
+  </pre>
 
-        - BGP_INTERNAL_NEIGHBOR metadata for iBGP connectivity to other linecards
-
+   - BGP_INTERNAL_NEIGHBOR metadata for iBGP connectivity to other linecards
+   <pre>
                   "BGP_INTERNAL_NEIGHBOR": {
                  "3.3.3.1": {
                "asn": "65100",
@@ -579,7 +319,7 @@ Since the generated minigraph file does not contain the VoQ related info, we can
             .
           },
        
-
+  </pre>
         - SYSTEM_PORT info for each linecard's frontpanel port, recycle port, and Inband port derived from the jr2 BCM file
                 
 
