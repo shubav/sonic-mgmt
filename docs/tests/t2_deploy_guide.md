@@ -272,7 +272,7 @@ The above command will generate and copy the minigraph file for all the linecard
 
 Since the generated minigraph file does not contain the VoQ related info, we can't deploy it to generate a config_db that has the VoQ related info. Instead, on each linecard
 - run sonic_cfggen to generate a temporary config_db.json.
-<pre>   
+<pre>
 sudo sonic-cfggen -m /etc/sonic/minigraph.xml --print-data > /home/admin/config_db_oc_mg.json
 </pre>           
 
@@ -281,79 +281,76 @@ sudo sonic-cfggen -m /etc/sonic/minigraph.xml --print-data > /home/admin/config_
    - VoQ info to DEVICE_METADATA.localhost
    
    <pre>
-                "DEVICE_METADATA": {
-                "localhost": {
-                    .
-                    .
-                    "switch_type": "voq",
-                    "switch_id": "42",
-                    "asic_id": "04:00.0",
-                    "max_cores": "48",
-                    "asic_name": "Asic0"
-                }
-              },
+    "DEVICE_METADATA": {
+        "localhost": {
+            .
+            .
+            "switch_type": "voq",
+            "switch_id": "42",
+            "asic_id": "04:00.0",
+            "max_cores": "48",
+            "asic_name": "Asic0"
+         }
+     },
   </pre>
 
    - BGP_INTERNAL_NEIGHBOR metadata for iBGP connectivity to other linecards
    <pre>
-                  "BGP_INTERNAL_NEIGHBOR": {
-                 "3.3.3.1": {
-               "asn": "65100",
-               "holdtime": "180",
-              "keepalive": "60",
-              "local_addr": "3.3.3.22",
-              "name": "board7_Asic0",
-              "nhopself": "0",
-              "rrclient": "0"
-              },
-              "3333::3:1": {
-                "asn": "65100",
-                "holdtime": "180",
-                "keepalive": "60",
-                "local_addr": "3333::3:22",
-                "name": "board7_Asic0",
-                "nhopself": "0",
-                "rrclient": "0"
-            },
-            .
-            .
-          },
-       
+    "BGP_INTERNAL_NEIGHBOR": {
+        "3.3.3.1": {
+            "asn": "65100",
+             "holdtime": "180",
+             "keepalive": "60",
+             "local_addr": "3.3.3.22",
+             "name": "board7_Asic0",
+             "nhopself": "0",
+             "rrclient": "0"
+         },
+         "3333::3:1": {
+             "asn": "65100",
+             "holdtime": "180",
+             "keepalive": "60",
+             "local_addr": "3333::3:22",
+             "name": "board7_Asic0",
+             "nhopself": "0",
+             "rrclient": "0"
+         },
+         .
+         .
+      },
   </pre>
-        - SYSTEM_PORT info for each linecard's frontpanel port, recycle port, and Inband port derived from the jr2 BCM file
-                
-
-                  
-
-                  {
-                    "SYSTEM_PORT": {
-                        "Slot7|Asic0|Ethernet12": {
-                            "system_port_id": "1165",
-                            "speed": "400000",
-                            "switch_id": "36",
-                            "core_index": "0",
-                            "core_port_index": "13"
-                        },
-                        .
-                        .
-                        "Slot7|Asic0|Asic0": {
-                            "system_port_id": "1152",
-                            "speed": "400000",
-                            "switch_id": "36",
-                            "core_index": "0",
-                            "core_port_index": "0"
-                        },
-                       "Slot7|Asic0|Ethernet-IB0": {
-                            "system_port_id": "1189",
-                            "speed": "400000",
-                            "switch_id": "36",
-                            "core_index": "1",
-                            "core_port_index": "37"
-                        },
-                        .
-                        .
-                      }  
-
+  
+  -  SYSTEM_PORT info for each linecard's frontpanel port, recycle port, and Inband port derived from the jr2 BCM file
+  
+  <pre>
+  "SYSTEM_PORT": {
+      "Slot7|Asic0|Ethernet12": {
+           "system_port_id": "1165",
+           "speed": "400000",
+           "switch_id": "36",
+           "core_index": "0",
+           "core_port_index": "13"
+        },
+        .
+        .
+        "Slot7|Asic0|Asic0": {
+             "system_port_id": "1152",
+             "speed": "400000",
+             "switch_id": "36",
+             "core_index": "0",
+             "core_port_index": "0"
+         },
+         "Slot7|Asic0|Ethernet-IB0": {
+             "system_port_id": "1189",
+             "speed": "400000",
+             "switch_id": "36",
+             "core_index": "1",
+             "core_port_index": "37"
+          },
+          .
+          .
+ }  
+ </pre>
 
 - Copy the modified config_db.json to /etc/sonic/config_db.json on all the linecards.
 - Reboot the supervisor and all the linecards.
