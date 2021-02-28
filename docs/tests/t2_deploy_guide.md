@@ -349,7 +349,7 @@ sudo sonic-cfggen -m /etc/sonic/minigraph.xml --print-data > /home/admin/config_
           },
           .
           .
- }  
+      }
  </pre>
 
 - Copy the modified config_db.json to /etc/sonic/config_db.json on all the linecards.
